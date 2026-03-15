@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ByteRepairTeam</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ByteRepairMV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+#header-section {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-wrapper {
+  width: 90%;
+  max-width: 1787px;
+}
+
+.footer-logo {
+  border-radius: 100px;
+}
+
+.main-header {
+  background-color: var(--primary-blue);
+  border-radius: 83px;
+  height: 100px; /* Approximate height from design */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  color: white;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: white; /* Fallback */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannertxt {
+  color: white;
+  font-size: large;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 16px;
+  transition: opacity 0.2s;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.cta-button {
+  background-color: white;
+  border-radius: 54px;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+.cta-text {
+  color: black;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .main-header {
+    padding: 0 30px;
+    height: auto;
+    min-height: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 40px;
+  }
+  
+  .main-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .brand {
+    margin-right: auto;
+  }
+  
+  .cta-button {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-name {
+    display: none;
+  }
+  .main-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .brand, .cta-button, .main-nav {
+    margin: 0;
+  }
+}
+
+/* CSS for section section:Hero */
+#hero-section {
+  padding: 100px 0;
+  background-color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin-left: 10%; /* Visual alignment based on design */
+}
+
+.hero-label {
+  color: var(--primary-blue);
+  font-weight: 800;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  color: #030303;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    margin-left: 0;
+    text-align: center;
+  }
+  .hero-label {
+    font-size: 24px;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+}
+
+/* CSS for section section:Banner */
+#banner-section {
+  width: 100%;
+  background-color: var(--primary-blue);
+  padding: 60px 0;
+}
+
+.banner-strip {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.banner-item {
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .banner-strip {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* CSS for section section:Services */
+#services-section {
+  padding: 100px 0;
+  background-color: white;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.service-card {
+  background-color: var(--primary-blue);
+  padding: 40px;
+  height: 373px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-title {
+  color: white;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.service-link {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    height: 300px;
+  }
+}
+
+/* CSS for section section:Testimonials */
+#testimonials-section {
+  padding: 60px 0 150px 0;
+  background-color: white;
+  overflow: hidden; /* Hide side cards overflow if needed */
+}
+
+.testimonials-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 80px;
+  position: relative;
+}
+
+.testimonial-card {
+  flex-shrink: 0;
+}
+
+.side-card {
+  width: 509px;
+  height: 653px;
+  background-color: var(--bg-gray);
+  opacity: 0.5;
+}
+
+.main-card {
+  width: 679px;
+  min-height: 889px;
+  background-color: var(--primary-blue);
+  border-radius: 63px;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  /* Positioning to overlap side cards slightly if needed, but flex gap handles it cleanly here */
+}
+
+.user-image-wrapper {
+  width: 204px;
+  height: 206px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 40px;
+  border: 5px solid rgba(255,255,255,0.1);
+}
+
+.user-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.user-quote {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 540px;
+}
+
+@media (max-width: 1200px) {
+  .side-card {
+    display: none; /* Hide side cards on smaller screens */
+  }
+  .main-card {
+    width: 100%;
+    max-width: 600px;
+    min-height: auto;
+    padding: 60px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-image-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+  .user-quote {
+    font-size: 18px;
+  }
+}
+
+/* CSS for section section:Footer */
+#footer-section {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.site-footer {
+  padding: 80px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.brand-col {
+  flex: 2;
+}
+
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo-container {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-brand-name {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.footer-heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .brand-col {
+    flex: 1;
+  }
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<section id="header-section">
+  <div class="header-wrapper">
+    <header class="main-header">
+      <div class="brand">
+        <div class="logo-container">
+          <img src="images/980253877001a9a4d9c216b76a786c640e36f9b9.png" alt="ByteRepairMV Logo" class="logo-img">
+        </div>
+        <span class="brand-name">BYTEREPAIRMV</span>
+      </div>
+      
+      <nav class="main-nav">
+        <a href="./index.html" class="nav-link">HOME</a>
+        <a href="#" class="nav-link">ABOUT</a>
+        <a href="./store.html" class="nav-link">STORE</a>
+      </nav>
+      
+      <a href="https://wa.me/+9609559866" class="cta-button">
+        <span class="cta-text">APPOINTMENT</span>
+      </a>
+    </header>
+  </div>
+</section>
+<section id="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <h2 class="hero-label">AFFORDABLE</h2>
+      <h1 class="hero-title">
+        COMPUTER & ELECTRONICS<br>
+        REPAIR CENTER IN THE MALDIVES
+      </h1>
+    </div>
+  </div>
+</section>
+<section id="banner-section">
+  <div class="banner-strip">
+    <marquee class="bannertxt" scrollamount="10" behavior="scroll" direction="left">....AFFORDABLE....GENUINE....PROFESSIONAL....</marquee>
+  </div>
+</section>
+<section id="services-section">
+  <div class="container">
+    <div class="section-title-group">
+      <span class="section-label">OUR SERVICE</span>
+      <h2 class="section-heading">SERVICES | BYTEREPAIRTEAM</h2>
+    </div>
+    
+    <div class="services-grid">
+      <!-- Card 1 -->
+      <div class="service-card">
+        <h3 class="service-title">MOBILE<br>REPAIRS</h3>
+        <a href="#" class="service-link">SEE MORE</a>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="service-card">
+        <h3 class="service-title">COMPUTER<br>REPAIRS</h3>
+        <a href="#" class="service-link">SEE MORE</a>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="service-card">
+        <h3 class="service-title">CONSUMER<br>ELECTRONICS</h3>
+        <a href="#" class="service-link">SEE MORE</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="testimonials-section">
+  <div class="container">
+    <div class="section-title-group">
+      <span class="section-label">TESTIMONALS</span>
+      <h2 class="section-heading">WHAT OTHER PEOPLE SAY ? |<br>BYTEREPAIRTEAM</h2>
+    </div>
+    
+    <div class="testimonials-wrapper">
+      <!-- Left Placeholder Card -->
+      <div class="testimonial-card side-card"></div>
+      
+      <!-- Main Active Card -->
+      <div class="testimonial-card main-card">
+        <div class="user-image-wrapper">
+          <img src="images/f261190517845aec9da004de4069d03824129333.png" alt="Nishaam" class="user-image">
+        </div>
+        <h3 class="user-name">Nishaam</h3>
+        <p class="user-quote">
+          “ I would recommend byterepairmv to anyone, they are professional and fast. The service was excellent. I called because my PC wasnt turning on. They diagnosed it on the spot and fixed it, Price was reasonable as well ”
+        </p>
+      </div>
+      
+      <!-- Right Placeholder Card -->
+      <div class="testimonial-card side-card"></div>
+    </div>
+  </div>
+</section>
+<section id="footer-section">
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Brand Column -->
+        <div class="footer-col brand-col">
+          <div class="footer-logo-row">
+            <div class="footer-logo-container">
+              <img src="images/980253877001a9a4d9c216b76a786c640e36f9b9.png" alt="Logo" class="footer-logo">
+            </div>
+            <span class="footer-brand-name">BYTEREPAIRMV</span>
+          </div>
+        </div>
+
+        <!-- Social Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Social</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.instagram.com/byterepairsmv/">Instagram</a></li>
+            <li><a href="https://www.tiktok.com/@byterepairsmv">TikTok</a></li>
+            <li><a href="https://wa.me/+9609559866">Get a appointment</a></li>
+          </ul>
+        </div>
+
+        <!-- Sitemap Column -->
+        <div class="footer-col">
+          <h4 class="footer-heading">site map</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./store.html">Store</a></li>
+            <li><a href="./index.html">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+</body>
+</html>

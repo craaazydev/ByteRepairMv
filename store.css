@@ -1,0 +1,39 @@
+:root {
+  --primary-blue: #1800ac;
+  --text-white: #ffffff;
+  --text-black: #080808;
+  --bg-white: #ffffff;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-white);
+  color: var(--text-black);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Utility for responsive typography */
+h1, h2, h3, p {
+  margin: 0;
+}

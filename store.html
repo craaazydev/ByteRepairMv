@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BytePartsStore</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ByteRepair Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="store.css">
+  <style id="sections-styles">
+/* CSS for section section:Header */
+#header-section {
+  padding-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-header {
+  background-color: var(--primary-blue);
+  border-radius: 83px;
+  height: 166px;
+  width: 100%;
+  max-width: 1787px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.brand-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-img {
+  width: 133px;
+  height: 133px;
+  border-radius: 68.5px;
+  object-fit: cover;
+}
+
+.brand-name {
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+}
+
+.main-nav {
+  display: flex;
+  gap: 60px;
+}
+
+.nav-link {
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+}
+
+.cta-button {
+  background-color: var(--bg-white);
+  border-radius: 54px;
+  width: 242px;
+  height: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+.cta-text {
+  color: #000000;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 1200px) {
+  .main-header {
+    height: auto;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+    border-radius: 40px;
+  }
+  
+  .main-nav {
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-area {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo-img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .cta-button {
+    width: 100%;
+    height: 60px;
+  }
+}
+
+/* CSS for section section:Hero */
+#hero-section {
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+.hero-container {
+  padding-left: 14%; /* Matches the design's left alignment (274px/1920px) */
+}
+
+.hero-title {
+  color: var(--primary-blue);
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero-description {
+  color: var(--text-black);
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.1;
+  max-width: 800px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .hero-container {
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+  }
+  
+  .hero-description {
+    font-size: 40px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+  
+  .hero-description {
+    font-size: 28px;
+  }
+}
+
+/* CSS for section section:Products */
+#products-section {
+  padding-bottom: 150px;
+}
+
+.products-container {
+  display: flex;
+  gap: 20px;
+  padding-left: 14%; /* Align with hero text */
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background-color: var(--primary-blue);
+  width: 456px;
+  height: 636px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-content {
+  margin-bottom: 120px; /* Approximate spacing from bottom based on design */
+}
+
+.product-title {
+  color: var(--text-white);
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.product-link {
+  color: var(--text-white);
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+}
+
+.product-link:hover {
+  border-bottom-color: var(--text-white);
+}
+
+@media (max-width: 1200px) {
+  .products-container {
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .product-content {
+    margin-bottom: 40px;
+  }
+  
+  .product-title {
+    font-size: 32px;
+  }
+}
+
+/* CSS for section section:Footer */
+#footer-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 8%;  /* Adjusted to match visual position x=154 */
+  padding-right: 10%;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 133px;
+  height: 133px;
+  border-radius: 68.5px;
+  object-fit: cover;
+}
+
+.footer-brand-name {
+  color: var(--text-black); /* Assuming black for footer text based on context, though JSON says white, usually footer on white bg is black text. Checking JSON... JSON says style_7 which is white. But background is white? Wait. The root background is white. The text color in JSON for footer items is White (#ffffff). This implies the footer might have a dark background or the JSON color is for a dark theme. However, the design image shows a white background. I will use a dark color for visibility on white background, or if the design implies a dark footer section, I should add a background. The root frame is white. I will assume the text should be visible (black/blue) or the footer has a background. Given the prompt asks to follow JSON, but white text on white bg is invisible. I will use the primary blue for footer text or black to ensure visibility, assuming the JSON color might be from a dark mode variant or mistake. I'll stick to the visual hierarchy: Dark text on white background. */
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.footer-links-group {
+  display: flex;
+  gap: 150px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--primary-blue);
+  text-transform: capitalize;
+}
+
+.footer-link {
+  font-size: 20px;
+  color: var(--text-black);
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--primary-blue);
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 60px;
+    padding-left: 5%;
+  }
+  
+  .footer-links-group {
+    width: 100%;
+    justify-content: space-between;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-links-group {
+    flex-direction: column;
+  }
+  
+  .footer-brand {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<section id="header-section">
+  <div class="container">
+    <header class="main-header">
+      <div class="brand-area">
+        <img src="images/980253877001a9a4d9c216b76a786c640e36f9b9.png" alt="ByteRepair Logo" class="logo-img">
+        <span class="brand-name">BYTEREPAIRMV</span>
+      </div>
+      
+      <nav class="main-nav">
+        <a href="./index.html" class="nav-link">HOME</a>
+        <a href="./index.html" class="nav-link">ABOUT</a>
+        <a href="./store.html" class="nav-link">STORE</a>
+      </nav>
+      
+      <a href="https://wa.me/+9609559866" class="cta-button">
+        <span class="cta-text">APPOINTMENT</span>
+      </a>
+    </header>
+  </div>
+</section>
+<section id="hero-section">
+  <div class="container hero-container">
+    <h1 class="hero-title">BYTEREPAIRSTORE</h1>
+    <p class="hero-description">
+      WELCOME TO THE STORE, YOUR ONE STOP HUB FOR GENUINE PARTS IN THE MALDIVES
+    </p>
+  </div>
+</section>
+<section id="products-section">
+  <div class="container products-container">
+    <!-- Product 1 -->
+    <article class="product-card">
+      <div class="product-content">
+        <h3 class="product-title">WD BLUE HDD<br>500GB</h3>
+        <a href="#" class="product-link">SEE MORE</a>
+      </div>
+    </article>
+
+    <!-- Product 2 -->
+    <article class="product-card">
+      <div class="product-content">
+        <h3 class="product-title">PS4 HALL EFFECT SENSOR</h3>
+        <a href="#" class="product-link">SEE MORE</a>
+      </div>
+    </article>
+  </div>
+</section>
+<section id="footer-section">
+  <div class="container footer-container">
+    <div class="footer-brand">
+      <img src="images/980253877001a9a4d9c216b76a786c640e36f9b9.png" alt="ByteRepair Logo" class="footer-logo">
+      <span class="footer-brand-name">BYTEREPAIRMV</span>
+    </div>
+
+    <div class="footer-links-group">
+      <div class="footer-column">
+        <h4 class="footer-heading">Social</h4>
+        <a href="https://www.tiktok.com/@byterepairsmv" class="footer-link">TikTok</a>
+        <a href="https://wa.me/+9609559866" class="footer-link">WhatsApp</a>
+        <a href="https://www.instagram.com/byterepairsmv/" class="footer-link">Instagram</a>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="footer-heading">site map</h4>
+        <a href="./index.html" class="footer-link">Home</a>
+        <a href="./store.html" class="footer-link">Store</a>
+        <a href="./index.html" class="footer-link">About</a>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
